@@ -45,6 +45,7 @@
   <modules>
     <module>docker-compose-eureka</module>
     <module>docker-compose-gateway</module>
+    <module>docker-compose-config</module>
   </modules>
 	<build>
 		<plugins>

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-archetype
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liumapp/single-config-archetype/
+          search-paths: config
+
+server:
+  port: 7001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1234/eureka/
+
