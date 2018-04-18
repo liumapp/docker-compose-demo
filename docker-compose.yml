@@ -26,8 +26,6 @@ services:
     hostname: docker-compose-eureka
     ports:
       - "2333:2333"
-    depends_on:
-      - docker-compose-eureka
 
   demo-api-a:
     image: liumapp/demo-api-a:v1.0.0
