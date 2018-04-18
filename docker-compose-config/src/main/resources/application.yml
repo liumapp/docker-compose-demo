@@ -10,7 +10,7 @@ spring:
           uri: https://github.com/liumapp/docker-compose-demo/
           search-paths: config
   profiles:
-      active: native
+      active: git
 
 server:
   port: 7001
