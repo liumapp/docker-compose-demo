@@ -5,7 +5,7 @@ spring:
     config:
       discovery:
         enabled: true
-        serviceId: your_eureka_serviceId
+        serviceId: docker-compose-config
       profile: dev
       label: master
 server:
@@ -13,4 +13,4 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:1234/eureka/
+      defaultZone: http://docker-compose-eureka:1234/eureka/

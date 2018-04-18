@@ -1,6 +1,6 @@
 spring:
   application:
-    name: docker-compose-service-demo-api-a
+    name: demo-api-a
   cloud:
     config:
       discovery:
