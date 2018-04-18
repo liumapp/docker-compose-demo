@@ -1,5 +1,6 @@
 package com.liumapp.demo.docker.compose.service.demoapia.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,9 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class IndexController {
 
+    @Value("${custom.activeInfo}")
+    private String activeInfo;
+
     @RequestMapping("")
     public String index () {
-        return "hello , this is demo api a";
+        return "hello , this is demo api a , and activeInfo is : " + activeInfo;
     }
 
 }
