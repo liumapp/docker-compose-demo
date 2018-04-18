@@ -13,7 +13,7 @@ services:
     image: liumapp/docker-compose-config:v1.0.0
     restart: always
     container_name: docker-compose-config
-    hostname: docker-compose-eureka
+    hostname: docker-compose-config
     ports:
         - "7001:7001"
     depends_on:
@@ -23,7 +23,7 @@ services:
       image: liumapp/docker-compose-gateway:v1.0.0
       restart: always
       container_name: docker-compose-gateway
-      hostname: docker-compose-eureka
+      hostname: docker-compose-gateway
       ports:
         - "2333:2333"
       depends_on:
@@ -34,7 +34,7 @@ services:
     image: liumapp/demo-api-a:v1.0.0
     restart: always
     container_name: demo-api-a
-    hostname: docker-compose-eureka
+    hostname: demo-api-a
     ports:
       - "8081:8081"
     depends_on:
@@ -45,7 +45,7 @@ services:
     image: liumapp/demo-api-b:v1.0.0
     restart: always
     container_name: demo-api-b
-    hostname: docker-compose-eureka
+    hostname: demo-api-b
     ports:
       - "8082:8082"
     depends_on:
