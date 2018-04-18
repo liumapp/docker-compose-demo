@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.6.RELEASE</version>
+    <groupId>com.liumapp.demo.docker.compose</groupId>
+    <artifactId>docker-compose-demo</artifactId>
+    <version>v1.0.0</version>
   </parent>
 
   <groupId>com.liumapp.demo.docker.compose.gateway</groupId>
@@ -15,13 +15,6 @@
 
   <name>docker-compose-gateway</name>
   <url>http://maven.apache.org</url>
-
-  <properties>
-    <spring-cloud.version>Dalston.SR2</spring-cloud.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <java.version>1.8</java.version>
-  </properties>
 
   <dependencies>
     <dependency>
@@ -46,18 +39,6 @@
       <artifactId>spring-boot-starter-mobile</artifactId>
     </dependency>
   </dependencies>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${spring-cloud.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
 
   <build>
     <plugins>
