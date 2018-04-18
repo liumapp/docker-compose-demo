@@ -7,7 +7,7 @@ spring:
         native:
           search-locations: /usr/local/tomcat/project/docker-compose-demo/conf/
         git:
-          uri: https://github.com/liumapp/single-config-archetype/
+          uri: https://github.com/liumapp/docker-compose-demo/
           search-paths: conf
   profiles:
       active: native

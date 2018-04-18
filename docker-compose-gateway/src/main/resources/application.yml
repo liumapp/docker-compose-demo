@@ -12,11 +12,11 @@ eureka:
 
 zuul:
   routes:
-    serviceId:
-      serviceId: your_server_id
+    demo-api-a:
+      serviceId: demo-api-a
       path: /**
-    serviceId2:
-      serviceId: your_server2_id
+    demo-api-b:
+      serviceId: demo-api-b
       path: /**
 
 ribbon:
