@@ -7,4 +7,8 @@ A simple Docker Compose Demo for Spring Cloud Project .
 
 * running project by using docker-compose :
  
-        docker-compose up -d 
+        docker-compose up -d
+        
+* stop all the project by running :
+
+        docker-compose down          
