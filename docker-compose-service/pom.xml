@@ -3,22 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.6.RELEASE</version>
+		<groupId>com.liumapp.demo.docker.compose</groupId>
+		<artifactId>docker-compose-demo</artifactId>
+		<version>v1.0.0</version>
 	</parent>
 
 	<groupId>com.liumapp.demo.docker.compose.service</groupId>
 	<artifactId>docker-compose-service</artifactId>
 	<version>v1.0.0</version>
 	<packaging>pom</packaging>
-
-	<properties>
-		<spring-cloud.version>Dalston.SR2</spring-cloud.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-	</properties>
 
 	<developers>
 		<developer>
@@ -29,19 +22,8 @@
 		</developer>
 	</developers>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-  <modules>
-    <module>demo-api-a</module>
-    <module>demo-api-b</module>
-  </modules>
+    <modules>
+      <module>demo-api-a</module>
+      <module>demo-api-b</module>
+    </modules>
 </project>
