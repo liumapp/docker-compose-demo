@@ -12,3 +12,15 @@ A simple Docker Compose Demo for Spring Cloud Project .
 * stop all the project by running :
 
         docker-compose down          
+        
+* if you changed the code , plz run :
+
+        docker-compose down 
+        
+        ./rm-images.sh
+        
+        ./build-image.sh
+        
+        docker-compose up
+        
+                
