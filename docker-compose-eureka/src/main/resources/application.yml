@@ -2,10 +2,6 @@ server:
   port: 1234
 
 eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
-    hostname: docker-compose-eureka
   client:
     register-with-eureka: false
     fetch-registry: false
