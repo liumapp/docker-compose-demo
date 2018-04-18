@@ -1,0 +1,52 @@
+version: '2'
+
+services:
+  docker-compose-config:
+    image: liumapp/docker-compose-config:v1.0.0
+    restart: always
+    container_name: docker-compose-config
+    hostname: docker-compose-config
+    ports:
+        - "7001:7001"
+    depends_on:
+        - docker-compose-eureka
+
+  docker-compose-eureka:
+    image: liumapp/docker-compose-eureka:v1.0.0
+    restart: always
+    container_name: docker-compose-eureka
+    hostname: docker-compose-eureka
+    ports:
+      - "1234:1234"
+
+  docker-compose-eureka:
+    image: liumapp/docker-compose-eureka:v1.0.0
+    restart: always
+    container_name: docker-compose-eureka
+    hostname: docker-compose-eureka
+    ports:
+      - "2333:2333"
+    depends_on:
+      - docker-compose-eureka
+
+  demo-api-a:
+    image: liumapp/demo-api-a:v1.0.0
+    restart: always
+    container_name: demo-api-a
+    hostname: demo-api-a
+    ports:
+      - "8081:8081"
+    depends_on:
+      - docker-compose-eureka
+      - docker-compose-config
+
+  demo-api-b:
+    image: liumapp/demo-api-b:v1.0.0
+    restart: always
+    container_name: demo-api-b
+    hostname: demo-api-b
+    ports:
+      - "8082:8082"
+    depends_on:
+      - docker-compose-eureka
+      - docker-compose-config
