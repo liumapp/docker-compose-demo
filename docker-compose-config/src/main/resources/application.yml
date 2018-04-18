@@ -5,10 +5,10 @@ spring:
     config:
       server:
         native:
-          search-locations: /usr/local/tomcat/project/docker-compose-demo/conf/
+          search-locations: /usr/local/tomcat/project/docker-compose-demo/config/
         git:
           uri: https://github.com/liumapp/docker-compose-demo/
-          search-paths: conf
+          search-paths: config
   profiles:
       active: native
 
