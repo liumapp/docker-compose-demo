@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: demo-api-a
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: your_eureka_serviceId
+      profile: dev
+      label: master
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1234/eureka/
