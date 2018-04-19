@@ -62,4 +62,20 @@ A simple Docker Compose Demo for Spring Cloud Project .
         
   But jut running in Docker , you do not need set this . 
   
-        
+## running demo 
+
+* Eureka pannel should be look like this :
+
+    ![eureka/jpg](https://github.com/liumapp/docker-compose-demo/blob/master/pic/eureka.jpg)
+
+* config server should be look like this :
+
+    ![config.jpg](https://github.com/liumapp/docker-compose-demo/blob/master/pic/config-server.jpg)
+
+* visit demo-api-a throw zuul gateway should be look like this :
+
+    ![demo-api-a.jpg](https://github.com/liumapp/docker-compose-demo/blob/master/pic/demo-api-a.jpg)
+
+* visit demo-api-b throw zuul gateway should be look like this :
+
+    ![demo-api-b.jpg](https://github.com/liumapp/docker-compose-demo/blob/master/pic/demo-api-b.jpg)         
