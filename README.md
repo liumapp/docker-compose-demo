@@ -1,5 +1,7 @@
 # docker-compose-demo
-A simple Docker Compose Demo for Spring Cloud Project . 
+A simple Docker Compose Demo for Spring Cloud Project .
+
+[中文文档](http://www.liumapp.com/articles/2018/04/19/1524100110011.html) 
 
 ## how to use
 

@@ -18,4 +18,3 @@ docker rmi liumapp/docker-compose-gateway:v1.0.0
 docker rmi liumapp/demo-api-a:v1.0.0
 docker rmi liumapp/demo-api-b:v1.0.0
 
-
