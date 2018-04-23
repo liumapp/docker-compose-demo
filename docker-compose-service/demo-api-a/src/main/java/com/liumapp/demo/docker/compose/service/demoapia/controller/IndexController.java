@@ -4,6 +4,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 
 /**
  * @author liumapp
@@ -28,9 +32,12 @@ public class IndexController {
     }
 
     @RequestMapping("write")
-    public String writeSth () {
+    public String writeSth () throws IOException {
         String filename = "demo-api-a.txt";
-
+        String info = "hello there , this is demo api a , and activeInfo is : " + activeInfo;
+        FileOutputStream out = new FileOutputStream(filePath + filename);
+        out.write(info.getBytes());
+        out.close();
         return "write success , the file path is : " + filePath + filename;
     }
 
