@@ -33,18 +33,23 @@ public class IndexController {
     /**
      * docker运行在虚拟环境下
      * 所以文件的写入操作还是在虚拟机上执行
+     * 如果要写入宿主机的硬盘上，需要设置Volumes
      * @return String
      * @throws IOException ioException
      */
     @RequestMapping("write")
     public String writeSth () throws IOException {
-        filePath = "/Volumes/";
         String filename = "demo-api-a.txt";
         String info = "hello there , this is demo api a , and activeInfo is : " + activeInfo;
         FileOutputStream out = new FileOutputStream(filePath + filename);
         out.write(info.getBytes());
         out.close();
         return "write success , the file path is : " + filePath + filename;
+    }
+
+    @RequestMapping("read")
+    public String readAndWrite () {
+        return "read and write success";
     }
 
 }
