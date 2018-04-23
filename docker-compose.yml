@@ -41,7 +41,8 @@ services:
     depends_on:
       - docker-compose-eureka
       - docker-compose-config
-    working_dir: /usr/local/tomcat/project/docker-compose-demo/
+    volumes:
+      - ./volumes:/tmp
 
   demo-api-b:
     image: liumapp/demo-api-b:v1.0.0

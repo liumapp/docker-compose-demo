@@ -38,6 +38,7 @@ public class IndexController {
      */
     @RequestMapping("write")
     public String writeSth () throws IOException {
+        filePath = "/tmp/";
         String filename = "demo-api-a.txt";
         String info = "hello there , this is demo api a , and activeInfo is : " + activeInfo;
         FileOutputStream out = new FileOutputStream(filePath + filename);
