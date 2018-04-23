@@ -3,9 +3,7 @@ package com.liumapp.demo.docker.compose.service.demoapia;
 import junit.framework.TestCase;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Value;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
