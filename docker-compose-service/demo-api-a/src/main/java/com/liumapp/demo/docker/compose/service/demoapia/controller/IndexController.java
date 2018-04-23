@@ -25,6 +25,9 @@ public class IndexController {
     @Value("${custom.filePath}")
     private String filePath;
 
+    @Value("${custom.readFrom}")
+    private String readFrom;
+
     @RequestMapping("")
     public String index () {
         return "hello , this is demo api a , and activeInfo is : " + activeInfo;
@@ -49,6 +52,7 @@ public class IndexController {
 
     @RequestMapping("read")
     public String readAndWrite () {
+
         return "read and write success";
     }
 
