@@ -30,6 +30,12 @@ public class IndexController {
         return "hello , this is demo api a , and activeInfo is : " + activeInfo;
     }
 
+    /**
+     * docker运行在虚拟环境下
+     * 所以文件的写入操作还是在虚拟机上执行
+     * @return String
+     * @throws IOException ioException
+     */
     @RequestMapping("write")
     public String writeSth () throws IOException {
         String filename = "demo-api-a.txt";

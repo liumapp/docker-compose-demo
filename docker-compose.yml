@@ -1,5 +1,6 @@
 version: '2'
 
+
 services:
   docker-compose-eureka:
     image: liumapp/docker-compose-eureka:v1.0.0
@@ -40,6 +41,7 @@ services:
     depends_on:
       - docker-compose-eureka
       - docker-compose-config
+    working_dir: /usr/local/tomcat/project/docker-compose-demo/
 
   demo-api-b:
     image: liumapp/demo-api-b:v1.0.0
@@ -51,3 +53,5 @@ services:
     depends_on:
       - docker-compose-eureka
       - docker-compose-config
+    working_dir: /usr/local/tomcat/project/docker-compose-demo/
+
