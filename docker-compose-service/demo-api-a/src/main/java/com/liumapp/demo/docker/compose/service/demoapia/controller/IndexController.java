@@ -19,9 +19,19 @@ public class IndexController {
     @Value("${custom.activeInfo}")
     private String activeInfo;
 
+    @Value("${custom.filePath}")
+    private String filePath;
+
     @RequestMapping("")
     public String index () {
         return "hello , this is demo api a , and activeInfo is : " + activeInfo;
+    }
+
+    @RequestMapping("write")
+    public String writeSth () {
+        String filename = "demo-api-a.txt";
+
+        return "write success , the file path is : " + filePath + filename;
     }
 
 }
