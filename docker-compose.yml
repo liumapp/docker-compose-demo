@@ -42,7 +42,7 @@ services:
       - docker-compose-eureka
       - docker-compose-config
     volumes:
-      - ./volumes:/tmp
+      - ./volumes:/Volumes
 
   demo-api-b:
     image: liumapp/demo-api-b:v1.0.0
