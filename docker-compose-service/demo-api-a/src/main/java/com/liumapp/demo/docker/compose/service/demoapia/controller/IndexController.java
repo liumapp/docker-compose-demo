@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 
 /**
@@ -50,8 +49,13 @@ public class IndexController {
         return "write success , the file path is : " + filePath + filename;
     }
 
+    /**
+     * read data from volumes/data.txt
+     * @return
+     */
     @RequestMapping("read")
-    public String readAndWrite () {
+    public String readAndWrite () throws IOException {
+        FileReader reader = new FileReader(new File("./volumes/data.txt"));
 
         return "read and write success";
     }
