@@ -21,11 +21,14 @@ public class IndexController {
     @Value("${custom.activeInfo}")
     private String activeInfo;
 
-    @Value("${custom.filePath}")
-    private String filePath;
+    @Value("${custom.volumePath}")
+    private String volumePath;
 
     @Value("${custom.readFrom}")
     private String readFrom;
+
+    @Value("${custom.basePath}")
+    private String basePath;
 
     @RequestMapping("")
     public String index () {
@@ -43,19 +46,26 @@ public class IndexController {
     public String writeSth () throws IOException {
         String filename = "demo-api-a.txt";
         String info = "hello there , this is demo api a , and activeInfo is : " + activeInfo;
-        FileOutputStream out = new FileOutputStream(filePath + filename);
+        FileOutputStream out = new FileOutputStream(volumePath + filename);
         out.write(info.getBytes());
         out.close();
-        return "write success , the file path is : " + filePath + filename;
+        return "write success , the file path is : " + volumePath + filename;
     }
 
     /**
      * read data from volumes/data.txt
+     * and write the data into /Volumes/demo-api-a-data.txt
      * @return
      */
     @RequestMapping("read")
     public String readAndWrite () throws IOException {
-        FileReader reader = new FileReader(new File("./volumes/data.txt"));
+        FileOutputStream out = new FileOutputStream()
+        File file = new File(basePath + readFrom);
+        BufferedReader reader = new BufferedReader(new FileReader(file));
+        String line = null;
+        while((line = reader.readLine()) != null) {
+
+        }
 
         return "read and write success";
     }
