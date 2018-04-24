@@ -86,7 +86,7 @@ A simple Docker Compose Demo for Spring Cloud Project .
 
 * go to /Volumes
 
-* use ls order , and you can find a file named demo-api-a.txt
+* use ls order , and you can find a file named demo-api-a.txt (after the container is dead , this file will still exist)
 
 ## read and write file from host demo               
 
@@ -94,4 +94,4 @@ A simple Docker Compose Demo for Spring Cloud Project .
 
 * go to /Volumes
 
-* use ls order , and you can find a file named demo-api-a-data.txt , which data is coming from ./volumes/data.txt
+* use ls order , and you can find a file named demo-api-a-data.txt , which data is coming from /Volumes/demo-api-a.txt

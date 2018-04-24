@@ -59,6 +59,7 @@ public class IndexController {
         String line = null;
         while((line = reader.readLine()) != null) {
             out.write(line.getBytes());
+            out.write('\n');
         }
         out.write("this is the data from read".getBytes());
         out.close();
