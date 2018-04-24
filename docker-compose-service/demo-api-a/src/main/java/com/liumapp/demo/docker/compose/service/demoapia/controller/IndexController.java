@@ -24,12 +24,6 @@ public class IndexController {
     @Value("${custom.volumePath}")
     private String volumePath;
 
-    @Value("${custom.readFrom}")
-    private String readFrom;
-
-    @Value("${custom.basePath}")
-    private String basePath;
-
     @RequestMapping("")
     public String index () {
         return "hello , this is demo api a , and activeInfo is : " + activeInfo;
@@ -60,7 +54,7 @@ public class IndexController {
     @RequestMapping("read")
     public String readAndWrite () throws IOException {
         FileOutputStream out = new FileOutputStream(volumePath + "demo-api-a-data.txt");
-        File file = new File(basePath + readFrom);
+        File file = new File(basePath);
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line = null;
         while((line = reader.readLine()) != null) {
