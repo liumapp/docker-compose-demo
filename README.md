@@ -78,4 +78,20 @@ A simple Docker Compose Demo for Spring Cloud Project .
 
 * visit demo-api-b throw zuul gateway should be look like this :
 
-    ![demo-api-b.jpg](https://github.com/liumapp/docker-compose-demo/blob/master/pic/demo-api-b.jpg)         
+    ![demo-api-b.jpg](https://github.com/liumapp/docker-compose-demo/blob/master/pic/demo-api-b.jpg)
+    
+## write file to host demo 
+
+* simply visit http://localhost:2333/demo-api-a/write
+
+* go to /Volumes
+
+* use ls order , and you can find a file named demo-api-a.txt
+
+## read and write file from host demo               
+
+* simply visit http://localhost:2333/demo-api-a/read
+
+* go to /Volumes
+
+* use ls order , and you can find a file named demo-api-a-data.txt , which data is coming from ./volumes/data.txt
