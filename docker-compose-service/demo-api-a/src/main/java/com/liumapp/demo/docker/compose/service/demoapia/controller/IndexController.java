@@ -47,19 +47,20 @@ public class IndexController {
     }
 
     /**
-     * read data from volumes/data.txt
+     * read data from /Volumes/demo-api-a.txt
      * and write the data into /Volumes/demo-api-a-data.txt
      * @return String
      */
     @RequestMapping("read")
     public String readAndWrite () throws IOException {
         FileOutputStream out = new FileOutputStream(volumePath + "demo-api-a-data.txt");
-        File file = new File(basePath);
+        File file = new File(volumePath + "demo-api-a.txt");
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line = null;
         while((line = reader.readLine()) != null) {
             out.write(line.getBytes());
         }
+        out.write("this is the data from read".getBytes());
         out.close();
         reader.close();
         return "read and write success";
